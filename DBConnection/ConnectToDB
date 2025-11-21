@@ -1,0 +1,14 @@
+const mongoose=require('mongoose')
+const MONGO_URI="mongodb+srv://priyadarshini:priya16@cluster0.wilnboa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const connectToDB=async()=>{
+    // try{
+        // await mongoose.connect(MONGO_URI)
+        return mongoose.connect(MONGO_URI)
+
+        // console.log("connected to DB");
+    // }
+    // catch(err){
+    //     console.log("Cant connect to Database",err);
+    // }
+}
+module.exports=connectToDB;
