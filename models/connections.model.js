@@ -2,7 +2,8 @@ const mongoose=require('mongoose');
 const connectionschema=mongoose.Schema({
     fromId:{
         type:mongoose.Schema.Types.ObjectId,
-        required:true
+        required:true,
+        ref:"user"
     },
     toId:{
         type:mongoose.Schema.Types.ObjectId,
@@ -10,7 +11,7 @@ const connectionschema=mongoose.Schema({
     },
     status:{
         type:String,
-        enum:["like","aceepted","rejected","ignore"],
+        enum:["like","accepted","rejected","ignore"],
         required:true
     }
 },{timestamps:true})
