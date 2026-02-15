@@ -18,10 +18,10 @@ const connectionrouter=require('./routes/connection.router')
 const userrouter=require('./routes/user.router')
 const profilerouter=require('./routes/profile.router')
 
-app.use("/auth",authrouter);
-app.use("/connection",connectionrouter);
-app.use("/user",userrouter);
-app.use("/profile",profilerouter);
+app.use("/api/auth",authrouter);
+app.use("/api/connection",connectionrouter);
+app.use("/api/user",userrouter);
+app.use("/api/profile",profilerouter);
 
 connectToDB()
 .then(()=>{
